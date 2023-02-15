@@ -5,21 +5,21 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-// System.Console.WriteLine("введите первое число(основание)");
-// int a =Convert.ToInt32(Console.ReadLine());
-// System.Console.WriteLine("введите второе число(степень)");
-// int b =Convert.ToInt32(Console.ReadLine());
-// if ((b>0)&&( b % 1 == 0))
-// {
-//    int result =1;
-//    for (int i = 1; i <= b; i++)
-//      {
-//         result =result*a;
-// }
-// System.Console.WriteLine(result);
-// }
+System.Console.WriteLine("введите первое число(основание)");
+int a = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("введите второе число(степень)");
+int b = Convert.ToInt32(Console.ReadLine());
+if ((b > 0) && (b % 1 == 0))
+{
+    int result = 1;
+    for (int i = 1; i <= b; i++)
+    {
+        result = result * a;
+    }
+    System.Console.WriteLine(result);
+}
 
-// else System.Console.WriteLine($"{b}не является натуральным числом");
+else System.Console.WriteLine($"{b}не является натуральным числом");
 
 
 
@@ -41,7 +41,7 @@ while (num / 10 != 0)
     sum = sum + num % 10;
     num = num / 10;
 }
-System.Console.WriteLine(sum+num);
+System.Console.WriteLine(sum + num);
 
 
 
@@ -51,3 +51,26 @@ System.Console.WriteLine(sum+num);
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
 // 6, 1, 33 -> [6, 1, 33]
+
+
+
+
+int n = 8;
+int[] arr = GetArray(n);
+
+int[] GetArray(int n)
+{
+    int[] array = new int[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        System.Console.WriteLine("введите  число");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
+
+for (int i = 0; i < arr.Length; i++)
+{
+    System.Console.Write(arr[i] + " ");
+}
